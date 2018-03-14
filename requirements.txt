@@ -1,1 +1,4 @@
 numpy
+seaborn
+pandas
+matplotlib
