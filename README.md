@@ -7,6 +7,10 @@ Net Present Value Simulator for Python
 
 npv.py provides a very high level simulation facility for getting the NPV (net presevent value) score for any business idea. By default, the simulation automatically generates an incomes statement based on set of input variables and volatility computations. 
 
+### 1.1. About NPV
+
+NPV is widely used by managers and investors to support decision making on large investments. For long it has been the gold standard tool for merger and acquisition activity, but is referred to as the 'discounted cash flow model' in that context. In fact, NPV is the model that Warren Buffet uses to evaluate companies[1]. 
+
 ## 2. Install and Use
 
 ### 2.1 Install 
@@ -84,3 +88,7 @@ The level of incertainty related with the change e.g. the incertainty of revenue
 #### steps
 
 The number of steps between the minimum and maximum values for change e.g. in the case of the above example 10 steps would yield possibilities 30%, 60%, 90%...300% and so forth. 
+
+## References
+
+[1] https://hbr.org/2014/11/a-refresher-on-net-present-value
