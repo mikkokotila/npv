@@ -1,5 +1,6 @@
 import warnings
 import pandas as pd
+import numpy as np
 
 from npvpy.main import NPV
 from npvpy.dist import dist
