@@ -1,3 +1,5 @@
+![npvpy](https://raw.githubusercontent.com/mikkokotila/npvpy/master/logo.png)
+
 # npvpy
 Net Present Value Simulator for Python
 
