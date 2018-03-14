@@ -176,4 +176,4 @@ class NPV:
         ocfc = self._build_table()
         npv = np.npv(self.p['rate_of_return'], ocfc)
         
-        return npv
+        return int(npv)
