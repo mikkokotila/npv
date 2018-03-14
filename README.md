@@ -57,8 +57,6 @@ you might have to separately install seaborn:
 
 ### 3.1. Parameter Taxonomy
 
-### Signal Taxonomy 
-
 Parameter | Example Value | Description
 -------|---------|---------
 core | 100 | what the business is delivering
@@ -99,6 +97,8 @@ risk_factor | 2 | a factor effects the likeliness of change to be negative
 core_static | False | cores are same every year if True
 revenue_static | False | revenue is same every year if True
 resource_static | False | resource is same every year if True
+
+Below some additional details is provided for (some of) the parameters. 
 
 #### FUNDAMENTAL PARAMETERS
 
