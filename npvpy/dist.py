@@ -1,5 +1,7 @@
-import seaborn as sns
+import matplotlib
+matplotlib.use('Agg')  # this needs to be here exceptionslly
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 def dist(x,
          data,
