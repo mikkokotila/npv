@@ -4,11 +4,19 @@ class NPV:
     
     def __init__(self, parameters):
         
-        self.p = parameters
+        if type(parameters) is str:
+            self.p = self.load_params(parameters)
+        else:
+            self.p = parameters
+            
+    
+    def load_params(self, filename):
         
-    def _print(self):
+        with open(filename, 'r') as f:
+            s = f.read()
+            out = ast.literal_eval(s)
         
-        return print(self.params)
+        return out
     
     def _change_numbers(self, aspect_change, aspect_incertainty, aspect_steps):
 
