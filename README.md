@@ -9,7 +9,10 @@ npv.py provides a very high level simulation facility for getting the NPV (net p
 
 ### 1.1. About NPV
 
-NPV is widely used by managers and investors to support decision making on large investments. For long it has been the gold standard tool for merger and acquisition activity, but is referred to as the 'discounted cash flow model' in that context. In fact, NPV is the model that Warren Buffet uses to evaluate companies[1]. 
+NPV, or Net Present Value, is the difference between the present value of cash inflows and the present value of cash outflows over a period of time. Its main use-case is in capital budgeting to analyze profitability of a projected investment or project[1].
+
+NPV is widely used by managers and investors to support decision making on large investments. For long it has been the gold standard tool for merger and acquisition activity, but is referred to as the 'discounted cash flow model' in that context. In fact, NPV is the model that Warren Buffet uses to evaluate companies[2]. 
+
 
 ## 2. Install and Use
 
@@ -102,4 +105,5 @@ The number of steps between the minimum and maximum values for change e.g. in th
 
 ## References
 
-[1] https://hbr.org/2014/11/a-refresher-on-net-present-value
+[1] https://www.investopedia.com/terms/n/npv.asp
+[2] https://hbr.org/2014/11/a-refresher-on-net-present-value
