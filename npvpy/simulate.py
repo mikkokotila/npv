@@ -38,6 +38,6 @@ def simulate(rounds, parameters, df=False, distribution=True):
          
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
-            dist('NPV', scores, bins=50)
+            dist('NPV', out, bins=50)
             
     return out
