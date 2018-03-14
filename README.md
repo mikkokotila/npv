@@ -55,6 +55,51 @@ you might have to separately install seaborn:
 
 ## 3. Parameters
 
+### 3.1. Parameter Taxonomy
+
+### Signal Taxonomy 
+
+Parameter | Example Value | Description
+-------|---------|---------|---------
+core | 100 | what the business is delivering
+revenue | 30000 | revenue per delivery
+resource | 8500 | cost of resource per delivery
+core_change | 0.5 | maximum annual change of deliverable
+core_incertainty | 1 | level of incertainty
+core_steps | 30 | number choices between minimum and maximum
+revenue_change | 0.2 | max annual change of revenue
+revenue_incertainty | 1 | level of incertainty 
+revenue_steps | 100 | number choices between minimum and maximum
+resource_change | 0.2 | max annual change of resouce cost
+resource_incertainty | 0.2 | level of incertainty
+resource_steps | 10 | number choices between minimum and maximum
+sales_salary | 8000 | annual salary per sales person
+production_salary | 5000 | annual salary per production person 
+manager_salary | 12000 |  annual salary per manager
+service_salary | 8000 | annual salary per service person
+admin_salary | 5000 | annual salary per admin person
+core_per_sales | 10 | number deliverables a sales person can handle
+core_per_production | 5 | number of deliverables a production person can handle
+core_per_manager | 50 | number of deliverables a manager can handle
+core_per_service | 20 | number of deliverables a service person can handle
+core_per_admin | 200 | number of deliverables an admin person can handle
+salaries_change | 0.05 | max annual change in sales
+salaries_incertainty | 0.1 | level of incertainty
+salaries_steps | 10 | number choices between minimum and maximum
+employer_liabilities | 0.45 | extra costs in addition to salaries
+employer_misc | 0.03 | other employer costs
+marketing_cost | 0.1 | marketing cost as a factor of revenue
+other_cost | 0.1 | other business costs
+tax_rate | 0.21 | the tax rate the business is subject to
+number_of_years | 10 | number of years to model
+depreciation_years | 10 | how many years to depreciate investment
+capital_investment | 100000 | initial investment into the business
+rate_of_return | 0.1 | the rate of return (ROR) 
+risk_factor | 2 | a factor effects the likeliness of change to be negative
+core_static | False | cores are same every year if True
+revenue_static | False | revenue is same every year if True
+resource_static | False | resource is same every year if True
+
 #### FUNDAMENTAL PARAMETERS
 
 There are three *fundamental aspects* in the model; the core deliverable, revenue per deliverable, and cost of resource per deliverable. 
