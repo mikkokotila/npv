@@ -34,7 +34,22 @@ def check_dependencies():
         import numpy
     except ImportError:
         install_requires.append('numpy')
-
+        
+    try:
+        import pandas
+    except ImportError:
+        install_requires.append('pandas')
+    
+    try:
+        import seaborn
+    except ImportError:
+        install_requires.append('seaborn')
+    
+    try:
+        import matplotlib
+    except ImportError:
+        install_requires.append('matplotlib')
+        
     return install_requires
 
 
