@@ -19,7 +19,7 @@ to install:
 
     pip install git+https://github.com/mikkokotila/npvpy.git
 
-### 2.2. Use
+### 2.2. Single Use
 
 #### To import
 
@@ -34,6 +34,17 @@ to install:
 
     npv = NPV('params.txt')
     npv._calculate_npv()
+    
+### 2.3. Simulation Use
+
+#### To import
+    
+    from npvpy.simulate import simulate
+    %matplotlib inline
+
+#### Run a simulation of 10,000 rounds with parameters from text file
+
+    scores = simulate(10000,'params.txt')
 
 ## 3. Parameters
 
