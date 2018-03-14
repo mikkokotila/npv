@@ -31,6 +31,10 @@ def simulate(rounds, parameters, df=False, distribution=True):
         out = np.array(out)
         
     if distribution is True:
+        if df is False:
+            out = pd.DataFrame(out)
+            out.columns = ['NPV']
+         
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             dist('NPV', scores, bins=50)
