@@ -40,10 +40,10 @@ def check_dependencies():
     except ImportError:
         install_requires.append('pandas')
     
-    try:
-        import seaborn
-    except ImportError:
-        install_requires.append('seaborn')
+    #try:
+    #    import seaborn
+    #except ImportError:
+    #    install_requires.append('seaborn')
     
     try:
         import matplotlib
