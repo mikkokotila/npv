@@ -71,11 +71,11 @@ revenue_steps | 100 | number choices between minimum and maximum
 resource_change | 0.2 | max annual change of resouce cost
 resource_incertainty | 0.2 | level of incertainty
 resource_steps | 10 | number choices between minimum and maximum
-sales_salary | 8000 | annual salary per sales person
-production_salary | 5000 | annual salary per production person 
-manager_salary | 12000 |  annual salary per manager
-service_salary | 8000 | annual salary per service person
-admin_salary | 5000 | annual salary per admin person
+sales_salary | 96000 | annual salary per sales person
+production_salary | 75000 | annual salary per production person 
+manager_salary | 132000 |  annual salary per manager
+service_salary | 96000 | annual salary per service person
+admin_salary | 60000 | annual salary per admin person
 core_per_sales | 10 | number deliverables a sales person can handle
 core_per_production | 5 | number of deliverables a production person can handle
 core_per_manager | 50 | number of deliverables a manager can handle
