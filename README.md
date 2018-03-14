@@ -7,7 +7,19 @@ Net Present Value Simulator for Python
 
 npv.py provides a very high level simulation facility for getting the NPV (net presevent value) score for any business idea. By default, the simulation automatically generates an incomes statement based on set of input variables and volatility computations. 
 
-## 2. Use
+## 2. Install and Use
+
+### 2.1 Install 
+
+to install: 
+
+    pip install git+https://github.com/mikkokotila/npvpy.git
+
+### 2.2. Use
+
+#### To import
+
+    from npvpy.main import NPV
 
 #### Use with params in a dictionary
 
