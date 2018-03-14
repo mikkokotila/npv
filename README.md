@@ -60,7 +60,7 @@ you might have to separately install seaborn:
 ### Signal Taxonomy 
 
 Parameter | Example Value | Description
--------|---------|---------|---------
+-------|---------|---------
 core | 100 | what the business is delivering
 revenue | 30000 | revenue per delivery
 resource | 8500 | cost of resource per delivery
@@ -155,4 +155,5 @@ The number of steps between the minimum and maximum values for change e.g. in th
 ## References
 
 [1] https://www.investopedia.com/terms/n/npv.asp
+
 [2] https://hbr.org/2014/11/a-refresher-on-net-present-value
