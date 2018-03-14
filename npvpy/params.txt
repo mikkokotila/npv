@@ -32,7 +32,7 @@
     'number_of_years':10,
     'depreciation_years':10,
     'capital_investment':100000,
-    'rate_of_return':10,
+    'rate_of_return':0.1,
     'core_static':False,
     'revenue_static':False,
     'resource_static':False
