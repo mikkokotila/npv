@@ -21,6 +21,10 @@ NPV is widely used by managers and investors to support decision making on large
 to install: 
 
     pip install git+https://github.com/mikkokotila/npvpy.git
+    
+you might have to separately install seaborn:
+
+    pip install seaborn
 
 ### 2.2. Single Use
 
