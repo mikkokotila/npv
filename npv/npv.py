@@ -46,9 +46,6 @@ class NPV:
 
     def simulate_financials(self):
 
-        import sys
-        sys.path.insert(0, '/Users/mikko/Documents/GitHub/wrangle')
-
         import wrangle
 
         from .monthly_to_annual import monthly_to_annual
