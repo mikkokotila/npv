@@ -93,7 +93,6 @@ employer_misc | 0.03 | other employer costs
 marketing_cost | 0.1 | marketing cost as a factor of revenue
 other_cost | 0.1 | other business costs
 tax_rate | 0.21 | the tax rate the business is subject to
-number_of_years | 10 | number of years to model
 depreciation_years | 10 | how many years to depreciate investment
 capital_investment | 100000 | initial investment into the business
 rate_of_return | 0.1 | the rate of return (ROR)
