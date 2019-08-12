@@ -6,19 +6,19 @@ DESCRIPTION = "Net Present Value Simulator for Python"
 LONG_DESCRIPTION = """\
 npv.py An NPV Simulator for Python
 ==============================================
-**npv.py** is a Python package that provides a 
+**npv.py** is a Python package that provides a
 high performance, easy-to-use facility for
 simulating any number of NPV outcomes for a given
-business model. 
+business model.
 """
 
-DISTNAME = 'npvpy'
+DISTNAME = 'npv'
 MAINTAINER = 'Mikko Kotila'
 MAINTAINER_EMAIL = 'mailme@mikkokotila.com'
 URL = 'http://github.com/mikkokotila'
 LICENSE = 'MIT'
 DOWNLOAD_URL = 'https://github.com/mikkokotila/npvpy'
-VERSION = '0.3'
+VERSION = '0.4.1'
 
 try:
     from setuptools import setup
@@ -34,22 +34,22 @@ def check_dependencies():
         import numpy
     except ImportError:
         install_requires.append('numpy')
-        
+
     try:
         import pandas
     except ImportError:
         install_requires.append('pandas')
-    
+
     #try:
     #    import seaborn
     #except ImportError:
     #    install_requires.append('seaborn')
-    
+
     try:
         import matplotlib
     except ImportError:
         install_requires.append('matplotlib')
-        
+
     return install_requires
 
 

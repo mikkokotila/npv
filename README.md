@@ -3,55 +3,62 @@
 # npvpy
 Net Present Value Simulator for Python
 
-## 1. Overview 
+## 1. Overview
 
-npv.py provides a very high level simulation facility for getting the NPV (net presevent value) score for any business idea. By default, the simulation automatically generates an incomes statement based on set of input variables and volatility computations. 
+npv.py provides a very high level simulation facility for getting the NPV (net presevent value) score for any business idea. By default, the simulation automatically generates an incomes statement based on set of input variables and volatility computations.
 
 ### 1.1. About NPV
 
 NPV, or Net Present Value, is the difference between the present value of cash inflows and the present value of cash outflows over a period of time. Its main use-case is in capital budgeting to analyze profitability of a projected investment or project[1].
 
-NPV is widely used by managers and investors to support decision making on large investments. For long it has been the gold standard tool for merger and acquisition activity, but is referred to as the 'discounted cash flow model' in that context. In fact, NPV is the model that Warren Buffet uses to evaluate companies[2]. 
+NPV is widely used by managers and investors to support decision making on large investments. For long it has been the gold standard tool for merger and acquisition activity, but is referred to as the 'discounted cash flow model' in that context. In fact, NPV is the model that Warren Buffet uses to evaluate companies[2].
 
 
 ## 2. Install and Use
 
-### 2.1 Install 
+### 2.1 Install
 
-to install: 
+to install:
 
-    pip install git+https://github.com/mikkokotila/npvpy.git
-    
+`pip install git+https://github.com/mikkokotila/npvpy.git`
+
 you might have to separately install seaborn:
 
-    pip install seaborn
+`pip install seaborn`
 
 ### 2.2. Single Use
 
 #### To import
 
-    from npvpy.main import NPV
+`import npv`
 
 #### Use with params in a dictionary
 
-    npv = NPV(parameters)
-    npv._calculate_npv()
-    
-#### Use with params in a text file 
+```
+model = npv.NPV(params)
+model.calculate('npv')
+```
 
-    npv = NPV('params.txt')
-    npv._calculate_npv()
-    
+#### Use with params in a text file
+
+```
+model = npv.NPV('params.txt')
+model.calculate('npv')
+```
+
 ### 2.3. Simulation Use
 
 #### To import
-    
-    from npvpy.simulate import simulate
-    %matplotlib inline
+
+```    
+%matplotlib inline
+```
 
 #### Run a simulation of 10,000 rounds with parameters from text file
 
-    scores = simulate(10000,'params.txt')
+```
+scores = npv.simulate(1000, 'params.txt')
+```
 
 ## 3. Parameters
 
@@ -66,13 +73,13 @@ core_change | 0.5 | maximum annual change of deliverable
 core_incertainty | 1 | level of incertainty
 core_steps | 30 | number choices between minimum and maximum
 revenue_change | 0.2 | max annual change of revenue
-revenue_incertainty | 1 | level of incertainty 
+revenue_incertainty | 1 | level of incertainty
 revenue_steps | 100 | number choices between minimum and maximum
 resource_change | 0.2 | max annual change of resouce cost
 resource_incertainty | 0.2 | level of incertainty
 resource_steps | 10 | number choices between minimum and maximum
 sales_salary | 96000 | annual salary per sales person
-production_salary | 75000 | annual salary per production person 
+production_salary | 75000 | annual salary per production person
 manager_salary | 132000 |  annual salary per manager
 service_salary | 96000 | annual salary per service person
 admin_salary | 60000 | annual salary per admin person
@@ -92,41 +99,41 @@ tax_rate | 0.21 | the tax rate the business is subject to
 number_of_years | 10 | number of years to model
 depreciation_years | 10 | how many years to depreciate investment
 capital_investment | 100000 | initial investment into the business
-rate_of_return | 0.1 | the rate of return (ROR) 
+rate_of_return | 0.1 | the rate of return (ROR)
 risk_factor | 2 | a factor effects the likeliness of change to be negative
 core_static | False | cores are same every year if True
 revenue_static | False | revenue is same every year if True
 resource_static | False | resource is same every year if True
 
-Below some additional details is provided for (some of) the parameters. 
+Below some additional details is provided for (some of) the parameters.
 
 #### FUNDAMENTAL PARAMETERS
 
-There are three *fundamental aspects* in the model; the core deliverable, revenue per deliverable, and cost of resource per deliverable. 
+There are three *fundamental aspects* in the model; the core deliverable, revenue per deliverable, and cost of resource per deliverable.
 
-#### core 
+#### core
 
-This is the core deliverable the company is profiding, for example a campaign, a tooth brush, a unit of electricity, and so on. 
+This is the core deliverable the company is profiding, for example a campaign, a tooth brush, a unit of electricity, and so on.
 
 #### revenue
 
-This is the average revenue that is incurred from selling one core unit e.g. a tooth brush. 
+This is the average revenue that is incurred from selling one core unit e.g. a tooth brush.
 
 #### resource
 
-This is the key resource needed in order for the company to be able to produce the core deliverable e.g. a datacenter needs servers. 
+This is the key resource needed in order for the company to be able to produce the core deliverable e.g. a datacenter needs servers.
 
-#### MODEL PARAMETERS 
+#### MODEL PARAMETERS
 
-There are several *general aspects* such as the period that should be forecasted. 
+There are several *general aspects* such as the period that should be forecasted.
 
 #### years
 
-The number of years that will be forecasted for the business. 
+The number of years that will be forecasted for the business.
 
 #### tax-rate
 
-A fixed income tax-rate the business is subject to. 
+A fixed income tax-rate the business is subject to.
 
 #### investment
 
@@ -136,21 +143,21 @@ The total amount of the initial investment into the business. NOTE: this will be
 
 (missing)
 
-### VOLATILITY PARAMETERS 
+### VOLATILITY PARAMETERS
 
 Each of the three *fundamental aspect* are subject to change each year. A  new growth factor is generated based on three factors.
 
-#### change 
+#### change
 
 The maximum rate of change for the aspect e.g. the maximum rate of change  per annum for revenue is 3 (300%).
 
 #### incertainty
 
-The level of incertainty related with the change e.g. the incertainty of revenue change per annum is 0.9 (90%) where rate of change of 300% would result in 30% to 300% change. 
+The level of incertainty related with the change e.g. the incertainty of revenue change per annum is 0.9 (90%) where rate of change of 300% would result in 30% to 300% change.
 
 #### steps
 
-The number of steps between the minimum and maximum values for change e.g. in the case of the above example 10 steps would yield possibilities 30%, 60%, 90%...300% and so forth. 
+The number of steps between the minimum and maximum values for change e.g. in the case of the above example 10 steps would yield possibilities 30%, 60%, 90%...300% and so forth.
 
 ## References
 
