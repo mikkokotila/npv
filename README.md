@@ -11,7 +11,7 @@ Startup and Corporate Investment and Financial Planning Simulator for Python.
 - monthly and annual cashflow statement
 - monthly and annual growth statistics
 
-Simulation is absed on set of input variables and volatility computations that can be adjusted as needed for each project. 
+Simulation is based on set of input variables and volatility computations that can be adjusted as needed for each project. 
 
 Additionally, facility for performing a **Monte Carlo** simulation is provided, and a method for generating key financial metrics individually. 
 
