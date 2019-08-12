@@ -1,11 +1,19 @@
 ![npvpy](https://raw.githubusercontent.com/mikkokotila/npvpy/master/logo.png)
 
-# npvpy
-Net Present Value Simulator for Python.
+# npv
+Startup and Corporate Investment and Financial Planning Simulator for Python.
 
 ## 1. Overview
 
-npv.py provides a very high level simulation facility for getting the NPV (net presevent value) score for any business idea. By default, the simulation automatically generates an incomes statement based on set of input variables and volatility computations.
+**NPV** provides a very high level simulation facility for getting the NPV (net presevent value) score for any business idea. By default, the simulation automatically generates:
+
+- monthly and annual income statement
+- monthly and annual cashflow statement
+- monthly and annual growth statistics
+
+Simulation is absed on set of input variables and volatility computations that can be adjusted as needed for each project. 
+
+Additionally, facility for performing a **Monte Carlo** simulation is provided, and a method for generating key financial metrics individually. 
 
 ### 1.1. About NPV
 
@@ -18,13 +26,12 @@ NPV is widely used by managers and investors to support decision making on large
 
 ### 2.1 Install
 
-to install:
+`pip install npv`
 
-`pip install git+https://github.com/mikkokotila/npvpy.git`
+or:
 
-you might have to separately install seaborn:
+`pip install git+https://github.com/mikkokotila/npv.git`
 
-`pip install seaborn`
 
 ### 2.2. Single Use
 
@@ -36,28 +43,18 @@ you might have to separately install seaborn:
 
 ```
 model = npv.NPV(params)
-model.calculate('npv')
 ```
+
+`model` now contains financial statements and other assets. 
+
+#### Perform an Ebitda Monte Carlo simulation for 1,000 rounds
+
+`model.monte_carlo(1000, 'ebitda')`
 
 #### Use with params in a text file
 
 ```
 model = npv.NPV('params.txt')
-model.calculate('npv')
-```
-
-### 2.3. Simulation Use
-
-#### To import
-
-```    
-%matplotlib inline
-```
-
-#### Run a simulation of 10,000 rounds with parameters from text file
-
-```
-scores = npv.simulate(1000, 'params.txt')
 ```
 
 ## 3. Parameters
